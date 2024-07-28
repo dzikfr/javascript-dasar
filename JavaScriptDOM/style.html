@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+</head>
+<body>
+    <h2>Pick Color</h2>
+    <input value="yellow" type="button">
+    <input value="blue" type="button">
+    <input value="red" type="button">
+    <div id="box" style="width: 500px; height: 500px; background-color: black;"></div>
+    <script>
+        const box = document.getElementById("box");
+        const buttons = document.querySelectorAll("input");
+        for (const button of buttons) {
+            button.onclick = function (){
+                box.style.backgroundColor = button.getAttribute("value");
+            }
+        }
+    </script>
+</body>
+</html>

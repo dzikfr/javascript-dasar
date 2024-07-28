@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tanpa nullish coalescing
+        let parameter;
+        let data = parameter;
+        if(data===undefined || data===null){
+            data= "Nilai Default";
+        }
+        alert(data)
+
+        //dengan nulllish coalescing
+        let parameter2;
+        let data2 = parameter2 ?? "Nilai Default";
+        document.writeln(data2)
+    </script>
+</body>
+</html>

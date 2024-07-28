@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName : "Dzikri",
+            lastName : "Ramdhani"
+        }
+
+        Object.freeze(person);
+        //gunakan object freeze agar object tidak dapat diubah, diihapus, ditambahkan
+        //gunakan object seal agar object tidak dapat dihapus dan ditambahkan
+
+        person.firstName = "Fauzi";
+        delete person.lastName;
+
+        console.log(person);
+
+
+
+        const target = {firstName : "Dzikri"};
+        const source = {lastName : "Fauzi"};
+
+        Object.assign(target, source);
+
+        console.log(target);
+        console.log(source);
+
+
+
+        {
+
+            const person = {
+            firstName : "Dzikri",
+            lastName : "FR"
+            };
+
+            console.log(Object.values(person));
+            console.log(Object.getOwnPropertyNames(person));
+
+        }
+
+        {
+            const nama = {
+                firstName : "Dzikri",
+                MiddleName : "Fauzi"
+            }
+
+            const namaBelakang = {
+                lastName : "Ramdhani"
+            }
+
+            const fullName = Object.assign(nama, namaBelakang);
+
+            console.log(fullName);
+        }
+
+    </script>
+</body>
+</html>

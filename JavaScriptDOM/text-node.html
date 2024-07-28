@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Node</title>
+</head>
+<body>
+    Testing
+    <script>
+        //Saat membuat HTML teks tanpa tag halaman web tersebut direpresentasikan dalam DOM,
+        //text tanpa tag bukan merupakan Element, melainkan Text Node
+        const test = document.body.firstChild;
+        console.log(test.wholeText);
+
+        //membuat text node
+        const text = document.createTextNode("Dzikri Fauzi Ramdhani")
+        document.body.appendChild(text);
+    </script>
+</body>
+</html>

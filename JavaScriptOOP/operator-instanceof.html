@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance Of</title>
+</head>
+<body>
+    <script>
+        class Employee{
+
+        }
+
+        class Manager extends Employee{
+
+        }
+
+        const dzikri = new Employee;
+        const fauzi = new Manager;
+
+        console.log(dzikri instanceof Employee);
+        console.log(dzikri instanceof Manager);
+        
+        console.log(fauzi instanceof Employee);
+        console.log(fauzi instanceof Manager);
+    </script>
+</body>
+</html>

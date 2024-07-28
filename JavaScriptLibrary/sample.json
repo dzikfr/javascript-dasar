@@ -1,0 +1,13 @@
+{
+    "firstName": "Dzikri",
+    "middleName": "Fauzi",
+    "lastName": "Ramdhani",
+    "alamat": {
+        "kota": "Tangerang",
+        "negara": "Indonesia"
+    },
+    "hobi": [
+        "Gaming",
+        "Tidur"
+    ]
+}

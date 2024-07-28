@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>with statement</title>
+</head>
+<body>
+    <script>
+        const nama = {
+            firstName : "Dzikri",
+            middleName : "Fauzi",
+            lastName : "Ramdhani",
+            alamat :{
+                jalan : "ki akdar"
+            }
+        }
+
+        //tanpa with statment
+        document.writeln(nama.firstName);
+        document.writeln(nama.middleName);
+        document.writeln(nama.lastName);
+
+        //dengan with statement
+        with(nama){
+            document.writeln(firstName);
+            document.writeln(middleName);
+            document.writeln(alamat);
+        }
+        //meskipun begitu, with statment tidak direkomendasikan dikarenkan
+        //akan menjadi ambigu saat ingin mengakses variabel tersebut
+
+        document.writeln(`<p>${nama.alamat.jalan}</p>`)
+
+    </script>
+</body>
+</html>

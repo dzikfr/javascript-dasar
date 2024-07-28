@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        const name = "Dzikri Fauzi";
+        const firstName = "Dzikri";
+        const middleName = "Fauzi";
+        const lastName = "Ramdhani";
+
+        const template1 = `Name : ${firstName} ${middleName}${lastName}`;
+
+        console.info(template1);
+
+        const nilai = 70;
+        const template2 = `Name : ${name}, Nilai : ${nilai > 60}`;
+
+        console.info(template2)
+
+        let multiLine = `
+        Nama Saya Dzikri
+        Ini Testing string template
+        Apakah Berhasil
+        `;
+
+        document.writeln("<pre>")
+        document.writeln(multiLine)
+        document.writeln("<pre>")
+        console.info(multiLine);
+    </script>
+</body>
+</html>

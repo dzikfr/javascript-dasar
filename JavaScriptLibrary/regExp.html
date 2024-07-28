@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Exp</title>
+</head>
+<body>
+    <script>
+        {
+            const regex1 = /dzikri/;
+            const regex2 = new RegExp("dzikri");
+            const regex3 = new RegExp(/dzikri/);
+        }
+
+        {
+            const name = "dzikri fauzi ramdhani";
+            const regex = /ramdhani/;
+
+            const result = regex.exec(name);
+            console.log(result);
+
+            const test = regex.test(name);
+            console.log(test);
+        }
+
+        {
+            const name = "dzikri ramdhani\nFauzi\nDzikri Ramdhani";
+            const regex1 = /dzikri/igm
+            const regex2 = /ramdhani/igm
+
+            let result;
+            while((result = regex1.exec(name))!== null){
+                console.log(result);
+            }
+            while((result = regex2.exec(name))!==null){
+                console.log(result);
+            }
+        }
+
+        {
+            const string= "aku kau aki uka kua auk ika eka ako eko";
+
+            document.writeln(string.match(/ak[aiueo]/ig));
+            document.writeln(string.search(/ak[aiueo]/ig));
+            document.writeln(string.replace(/ak[aiueo]/ig, "keren"));
+            document.writeln(string.replaceAll(/ak[aiueo]/ig, "keren"));
+            document.writeln(string.split(/e/ig));
+        }
+    </script>
+</body>
+</html>

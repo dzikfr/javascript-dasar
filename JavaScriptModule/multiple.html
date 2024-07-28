@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple export</title>
+</head>
+<body>
+    <script type="module">
+        import{company as perusahaan, sum as hasil, Company as Perusahaan} from "./scripts/multiple.mjs";
+
+        console.log(perusahaan);
+
+        const total = hasil(20,10);
+        console.log(total);
+       
+        console.log(Perusahaan);
+    </script>
+</body>
+</html>

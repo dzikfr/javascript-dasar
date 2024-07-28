@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        function Employee(firstName){
+            this.firstName = firstName;
+            this.sayHello = function(name){
+                console.log(`Hallo ${name}, My Name is ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+
+        function Manager(firstName, lastName){
+            this.lastName = lastName;
+            Employee.call(this, firstName);
+        }
+
+
+        let nama = new Manager("Dzikri", "Fauzi");
+        nama.sayHello("Kawan");
+
+        console.log(nama)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        //arrow function tidak memliki fitur arguments objects' function generator,
+        //tidak bisa mengakses this, dan tidak bisa mengakses super
+
+
+        //arrow function sederhana yang menggunakan 1 baris saja
+        const sayHello = (name) => console.log(`Hello ${name}`); 
+        
+        sayHello("Dzikri")
+
+
+
+        //arrow function sederhana 1 baris namun menggunakan blok
+        const sayHI = (nama) => {
+            const say = `Hello ${nama}`;
+            console.log(say)
+        }
+        sayHI("Fauzi")
+
+        //menggunakan arrow function yang menggunakan return value
+        const sum = (first, second) => first + second;
+        console.log(sum(100,150));
+        
+
+        //menngunakan arrow function sebagai parameter
+        function giveMeName(callback){
+            callback("Ramdhani");
+        }
+
+        giveMeName((name) => console.log(`Hello ${name}`))
+    </script>
+</body>
+</html>

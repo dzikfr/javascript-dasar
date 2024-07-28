@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function di dalam value</title>
+</head>
+<body>
+    <script>
+        
+        function sayHello(nama){
+            document.writeln(`<p>Hai ${nama}</p>`)
+        }
+
+        //memasukkan function ke dalam value 
+        let name = sayHello;
+
+        //bisa kita panggil dengan variabel yang diisikan function value
+        //bisa juga memanggil dengan cara biasa
+        name("Dzikri");
+        sayHello("Fauzi");
+
+
+        //memangil function ke dalam parameter
+        function giveMeName(callback){
+            callback("Ramdhani");
+        }
+
+        giveMeName(sayHello);
+        giveMeName(name)
+    </script>
+</body>
+</html>

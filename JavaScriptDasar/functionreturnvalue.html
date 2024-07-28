@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function return value</title>
+</head>
+<body>
+    <script>
+        //membuat function dan juga return valuenya
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say ;
+        }
+
+        //memanggill function dan menangkap return valuennya
+        const hasil = sayHello("Dzikri", "Fauzi");
+        document.writeln(hasil);
+
+
+
+
+        
+
+        function nilaiSkor(nilai){
+            if(nilai>90){
+                return "A";
+            }else if(nilai>80){
+                return "B";
+            }else if(nilai>70){
+                return "C";
+            }else if(nilai >60){
+                return "D";
+            }else{
+                return "E";
+            }
+        }
+
+        const hasilAkhir=nilaiSkor(85);
+        document.writeln(`<p>Hasil Nilai : ${hasilAkhir}</p>`)
+
+
+
+
+
+        function Mengecek(array, searchValue){
+            for(const element of array){
+                if(element === searchValue){
+                    console.log(`iterasi Elemet ${element}`)
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const array = [12,82,529,24829,4921,8429,928];
+        const search = 529;
+        const found = Mengecek(array, search);
+        document.writeln(`<p>${found}</p>`)
+    </script>
+</body>
+</html>

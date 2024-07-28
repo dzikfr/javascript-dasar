@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //global scope
+        let counter = 0;
+
+        function hitMe(){
+            counter++;
+        }
+
+        function other(){
+        }
+
+        hitMe();
+        hitMe();
+        console.info(counter);
+
+
+
+        //local scope
+        function first(){
+            let firstVariable = "FIRST";
+            console.info(firstVariable);
+        }
+        function second(){
+            let secondVariable = "SECOND";
+            console.info(secondVariable);
+        }
+        first();
+        second();
+        //jika ingin mengakses variaabel disini tidak akan bisa, dan akan mengalami error
+        //mengakses variabel antara local juga tidak bisa
+        //bisa memanggil functionnya saja
+
+
+
+
+        //scope pada nested function
+        function addNum(x,y){
+            function showMessage(text){
+                console.log(text);
+            }
+            let sum=x+y;
+            showMessage("sum is "+ sum+ " congrats")
+        }
+
+        addNum(5,6)
+    </script>
+</body>
+</html>

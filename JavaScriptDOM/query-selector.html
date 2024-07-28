@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <p class="text">ini adalah text</p>
+    <ul id="table">
+        <li class="table" id="first">first</li>
+        <li class="table" id="second">second</li>
+    </ul>
+    <div class="nama"></div>
+    <div class="tanggal"></div>
+    <script>
+        const all = document.querySelectorAll("*");
+        console.log(all);
+        
+        const table = document.querySelectorAll("#table");
+        console.log(table);
+
+        const first = document.querySelectorAll(".first");
+        console.log(first);
+
+        const second = document.querySelectorAll(".second");
+        console.log(second);
+
+        const typeTag = document.querySelectorAll("li");
+        console.log(typeTag);
+
+        const elements = document.querySelectorAll("[class]");
+        console.log(elements);
+    </script>
+</body>
+</html>

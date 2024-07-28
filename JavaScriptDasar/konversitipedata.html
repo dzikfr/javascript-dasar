@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi</title>
+</head>
+<body>
+    <script>
+
+        const value1 = parseInt ("1");
+        const value2 = 1;
+
+        const hasil = value1 + value2;
+
+        document.writeln(hasil);//
+
+        document.writeln(`<p>${parseInt("1.9")}</p>`);//ubah ke bilangan bulat
+        document.writeln(`<p>${parseFloat("1.9")}</p>`);//ubah ke bilangan pecahan atau desimal
+        document.writeln(`<p>${Number("1.9")}</p>`);//ubah kebulat dan desimal
+
+        const a = 1;
+        const b = 1;
+        const nilai = a.toString() + b.toString() ;//number ke string
+
+        document.writeln("nilai a+b =" + nilai)//ubah ke string
+
+
+        document.writeln(`<p>${parseInt("31.8dzikri")}</p>`);//hanya menampilkan number saja
+        document.writeln(`<p>${parseFloat("1.8dzikri")}</p>`);//hanya menampilkan number saja
+
+        document.writeln(`<p>${Number("300dzikri")}</p>`);//jika ada satu huruf maka tidak dapat dikonversi
+        document.writeln(`<p>${Number("1611")}</p>`);
+
+        const angka = Number("100dz");
+        const angka2 = angka + 100 ;
+
+        document.writeln(`<p>${12}</p>`)
+        document.writeln(`<p>${angka2}</p>`)
+        document.writeln(isNaN(a));//untuk mengecek apakah variabel nan atau tidak
+    </script>
+</body>
+</html>

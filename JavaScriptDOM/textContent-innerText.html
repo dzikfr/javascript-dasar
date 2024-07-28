@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Content dan Inner Text</title>
+</head>
+<body>
+    <p id="content">
+        <script>
+        console.log("Hello World");
+        </script>
+        <b>Dzikri</b> Fauzi <i>Ramdhani</i>
+    </p>
+   
+    <script>
+        const content = document.getElementById("content");
+        console.log(content.textContent);
+        console.log(content.innerText);
+        console.log(content.innerHTML);
+    </script>
+
+</body>
+</html>

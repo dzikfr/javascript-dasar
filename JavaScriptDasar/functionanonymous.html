@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+<body>
+    <script>
+        //menggunakan anonimous function ke dalam variabel
+        let helo = function(name){
+            document.writeln(`<p>Halo ${name}</p>`)
+        }
+
+        helo("Dzikri");
+        helo(7);
+
+
+
+
+        //menggunakan anonimous function ke dalam parameter
+        function giveMeName(callback){
+            callback("Ramdhani");
+        }
+
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`)
+        })
+    </script>
+</body>
+</html>

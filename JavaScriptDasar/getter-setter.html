@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //getter dapat digunakan untuk mengambil data pada objek 
+        //menggunakan getter bisa dijadikan sebagai property, bukan function
+        const person = {
+            firstName : "Dzikri",
+            lastName : "Fauzi",
+            get fullName(){
+                return `${this.firstName} ${this.lastName}`;
+            },
+            set fullName(value){
+                const array = value.split(" ");
+                this.firstName = array[0];
+                this.lastName = array[1];
+            }
+        };
+        //memanggil getter dan mencoba merubah firstnamenya
+        person.firstName = "Ramdhani";
+        console.log(person.fullName);
+
+
+        //memanggil setter
+        person.fullName = "Dzikri Fauzi";
+        console.table(person);
+
+        person.fullName = "Dzikri Ramdhani";
+        console.table(person);
+
+        
+    </script>
+</body>
+</html>

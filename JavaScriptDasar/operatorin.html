@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+        const name = {
+            firstName: "Dzikri",
+            lastName: "Fauzi"
+        };
+
+        if("firstName" in name){
+            alert(`Hello ${name.firstName}`)
+        }else{
+            alert("Hello")
+        };
+
+
+        const student = {
+            firstName: "Dzikri",
+            middleName: "undefined",
+            lastName: "Ramdhani"
+        };
+
+        if("middleName" in student){
+            alert(`Hello ${student.middleName}`)
+        }else{
+            alert("Hello")
+        };
+    </script>
+</body>
+</html>

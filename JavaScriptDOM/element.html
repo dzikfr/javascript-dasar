@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <h1 id="judul"></h1>
+    <p id="text"></p>
+
+
+
+    <div id="content" class="content">
+        <h2 id="subjudul" class="subtitle">ini subtitle</h2>
+        <p id="paragrap" class="paraghraph">ini paragrap</p>
+    </div>
+
+
+
+    <div id="desc" class="desc">
+        <h2 id="subjudul2" class="subtitle2">ini subtitle</h2>
+        <p id="paragrap2" class="paraghraph2">ini paragrap</p>
+    </div>
+
+
+    
+    <div id="baru" class="baru"></div>
+
+    <script>
+        const title = document.getElementById("judul");
+        title.textContent = "Belajar DOM"
+
+        const text = document.getElementById("text");
+        text.textContent = "hehehe"
+
+        //element property
+        const content = document.getElementById("content");
+        console.log(content.id);
+        console.log(content.className);
+        console.log(content.tagName);
+
+        //element method
+        const description = document.getElementById("paragrap2");
+        const judul = document.getElementById("desc");
+        
+        description.remove();
+        judul.remove();
+
+        //menambahkan element
+        const baru = document.getElementById("baru");
+
+        const iniJudul = document.createElement("h4");
+        iniJudul.textContent = "Menambahkan Element";
+        baru.appendChild(iniJudul);
+
+        const iniIsi = document.createElement("p");
+        iniIsi.textContent = "berhasil";
+        baru.appendChild(iniIsi);
+
+        
+    </script>
+</body>
+</html>

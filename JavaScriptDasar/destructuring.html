@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        //menggunakan destructuring pada array untuk mengambil data
+        {
+            const nama = ["Dzikri", "Fauzi", "Ramdhani", "lala", "lulu", "lele"];
+
+            //dengan menggunakan cara biasa
+            const firstName = nama[0];
+            const middleName = nama[1];
+            const lastName = nama [2];
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+
+            //dengan menggunakan destructuring array
+            const [namaAwal, namaTengah, namaAkhir, ...lainnya] = nama;
+            console.log(namaAwal);
+            console.log(namaTengah);
+            console.log(namaAkhir);
+            console.log(lainnya);
+        }
+
+
+
+        //menggunakan destructuring pada objek
+        {
+            const person = {
+                firstName : "Dzikri",
+                middleName : "Fauzi",
+                lastName : "Ramdhani",
+                alamat : {
+                    jalan : "Ki Akdar",
+                    kota : "Tangerang",
+                    negara : "Indonesia",
+                },
+                hobi : "Ngewibu",
+                kesukaan : "Game"
+            }
+
+            const {firstName, middleName, lastName , alamat : {jalan, kota, negara}, ...lainnya} = person;
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+            console.log(jalan);
+            console.log(kota);
+            console.log(negara);
+            console.log(lainnya);
+        }
+
+        //menggunakan destructuring pada parameter
+        {
+            function displayPerson({firstName, middleName, lastName}){
+                console.log(firstName);
+                console.log(middleName);
+                console.log(lastName);
+            }
+
+            const person = {
+                firstName : "Dzikri",
+                middleName : "Fauzi",
+                lastName : "Ramdhani"
+            }
+
+            displayPerson(person);
+        }
+
+        //menggunakan destructuring pada array parameter
+        {
+            function sum([first, second]){
+                return first + second;
+            }
+
+            console.log(sum([10,10]));
+            console.log(sum([20,20]));
+        }
+
+        //defaullt value pada destructuring
+        //default value juga dapat digunakan pada object
+        {
+            const name = ["Dzikri", , "Fauzi"];
+            const [firstName, middleName= "Joko", lastName="Ramdhani"] = name;
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+
+        //mengubah nama variabel pada destructuring
+        //caranya menggunakan titik dua di belakang destructuringnya dan diikuti nama variable yang diinginkan
+        {
+            const person = {
+                firstName : "Dzikri",
+                middleName : "Fauzi",
+                lastName : "Ramdhani",
+            }
+
+            const {firstName : namaDepan , middleName : namaTengah, lastName : namaBelakang} = person;
+
+            console.log(namaDepan);
+            console.log(namaTengah);
+            console.log(namaBelakang);
+        }
+    </script>
+</body>
+</html>

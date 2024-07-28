@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    <script>
+        //pada onject method menggunkaan kata kunci this
+        const person = {
+            name : "Dzikri",
+            sayHello : function (value){
+                console.log(`Hello ${value} My Name is ${this.name}`);
+            }
+        };
+
+        person.sayHello("Anto");
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>say Hello</title>
+</head>
+<body>
+    <script type="module">
+        import{sayHello, sayBye, name, Person} from "./scripts/say.mjs";
+
+        sayHello("Dzikri");
+        sayBye("Fauzi");
+
+        console.log(name);
+
+        const person = new Person("Dzikri");
+        person.sayHello("Fauzi");
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logika ooperator di non boolean</title>
+</head>
+<body>
+    <script>
+        //mengambil nilai truthy yang pertama
+        //jika tidak ada yang thruty maka akan mengambil data yang paling kanan atau akhir
+        console.info("Hello" || "");
+        console.info("" || []);
+        console.info(0 || "0");
+        console.info(false || "FALSE");
+        console.info(null || 0);
+        console.info(undefined || "UNDEFINED");
+
+        const person = {
+            nama : {
+                firstName : "Dzikri",
+                lastName : "Fauzi"
+            }
+        }
+
+        const name = person.nama.firstName || person.nama.lastName;
+
+        document.writeln(name);
+
+
+        //mengambil nilai falsy yang pertama
+        //jika tidak ada yang falsy maka akan mengambil data yang paling kanan atau akhir
+        console.info("Hello" && "");
+        console.info("" && []);
+        console.info(0 && "0");
+        console.info(false && "FALSE");
+        console.info(null && 0);
+        console.info(undefined && "UNDEFINED");
+        console.info(undefined && null);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR OF</title>
+</head>
+<body>
+    <script>
+        //digunakan untuk melakukan iterasi dengan value
+        //tidak bisa digunakan pada objek karena objek bukan iterable
+        const name = ["dzikri", "fauzi", "ramdhani"];
+
+        for(const nama of name){
+            document.writeln(`<p>${nama}</p>`);
+        }
+
+        const eja = "DZIKRI FAUZI RAMDHANI";
+
+        for(const char of eja){
+            document.writeln(`<p>${char}</p>`);
+        }
+
+        for (const key in eja) {
+           document.writeln(`<p>${key}</p>`)
+        }
+
+
+        //for of tidak bisa digunakan pada objek properti
+    </script>
+</body>
+</html>

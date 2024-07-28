@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest parameter</title>
+</head>
+<body>
+    <script>
+        //rest parammeter hanya boleh satu di dalam funftion dan harus ditaruh pada akhir parameter
+        function sum(nama, ...data){
+            let total = 0;
+            for(const item of data){
+                total+=item;
+            }
+            document.writeln(`<p>Total ${nama} is ${total}</p>`);
+        }
+
+        sum("Dzikri", 65,74,84,94,93,23);
+
+
+
+        //spread syntax
+        sum("Ramdhani", ...[20,20,20,20,20]);
+        //jika data sudah berbentuk array
+        const nilai = [10,10,10,10,10];
+        sum("Fauzi", ...nilai);
+
+
+        //Argumen objek
+        //jika parameter tidak ada, gunakan of arguments
+        //namun, cara ini kurang dianjurkan
+        function oldSum(){
+            let hasil = 0;
+            for (const iterator of arguments) {
+                hasil+=iterator;
+            }
+            document.writeln(`<p>Hasil adalah ${hasil}</p>`)
+        }
+
+        oldSum(10,20,30);
+    </script>
+</body>
+</html>

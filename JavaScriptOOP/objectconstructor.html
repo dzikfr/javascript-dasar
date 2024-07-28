@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        //membuat dari constructor function
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name){
+                console.info(`Hallo ${name}, My Name is ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        let dzikri = new Person("Dzikri", "Ramdhani");
+        //dzikri.firstName = "Dzikri";
+        dzikri.sayHello("Dodol");
+
+        let fauzi = new Person("Fauzi", "Ramdhani");
+        fauzi.sayHello("Batagor");
+
+        console.log(dzikri);
+        console.log(fauzi);
+    </script>
+</body>
+</html>

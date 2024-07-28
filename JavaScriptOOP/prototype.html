@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+        //membuat dari constructor function
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name){
+                console.info(`Hallo ${name}, My Name is ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        Person.prototype.run = function(){
+            console.log(`${this.firstName} Menyala Abangkuh`)
+        }
+
+        Person.prototype.exit = function(){
+            console.log(`Sampai Jumpa ${this.firstName}`)
+        }
+
+        let dzikri = new Person("Dzikri", "Ramdhani");
+        let fauzi = new Person("Fauzi", "Ramdhani");
+       
+        console.log(dzikri);
+        console.log(fauzi);
+
+        dzikri.run();
+        fauzi.run();
+        dzikri.exit();
+        fauzi.exit();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inherintance atau Pewarisan</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            sayHello(name){
+                console.log(`Hello ${name}, my name is employee ${this.name}`);
+            }
+        }
+
+        //untuk menggunakan nheritance, gunakan extends dan diikuti class parentnya
+        class Manager extends Employee{
+            sayHello(name){
+                console.log(`Hello ${name}, my name is Manager ${this.name}`);
+            }
+        }
+
+        const dzikri = new Employee();
+        //menggunakann dzikri.name seolah menambahkan variabel di dalam class tersebut
+        dzikri.name = "Dzikri";
+        dzikri.sayHello("Fauzi");
+
+        const ramdhani = new Manager();
+        ramdhani.name = "Ramdhani";
+        ramdhani.sayHello("Fauzi");
+
+
+    </script>
+</body>
+</html>
